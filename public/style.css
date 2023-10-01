@@ -1,0 +1,303 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Poppins',sans-serif;
+}
+body{
+    background: #0c1022;
+    color: #fff;
+}
+.header{
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index:100;
+
+}
+.logo{
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    pointer-events: none;
+
+}
+.navbar a{
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+}
+.navbar a.active{
+    background: linear-gradient(45deg,#f06,#3cf);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+
+
+}
+.home{
+    width:100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 70px 10% 0;
+}
+.home-content h1{
+    font-size: 56px;
+    font-weight: 700;
+}
+.home-content h3{
+    font-size: 32fx;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.home-content{
+    max-width: 500px;
+}
+.home-content p{
+    font-size: 16px;
+    margin: 20px 0 40px;
+}
+.btn{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height:48px;
+    background: yellowgreen;
+    border-radius: 40px;
+    font-size:19px;
+    color: #fff;
+    text-decoration: none;
+    font-weight:600 ;
+    letter-spacing: 1px;
+    z-index: 1;
+}
+
+.btn::before{
+    content: '';
+    position: absolute;
+    top:0;
+    left: 0;
+    inset: 0;
+    /*background: linear-gradient(45deg,#f06,#3cf,#f06);*/
+    z-index: -1;
+    background-position:0 0;
+    border-radius:40px ;
+    background-size:200% ;
+    filter: blur(5px);
+    transition:.5s ease;
+}
+.btn:hover::before{
+    background-position: 100% 0;
+}
+.btn::after{
+    content: '';
+    position: absolute;
+    top:0;
+    left: 0;
+    inset: 0;
+   
+    z-index: -1;
+    background-position:0 0;
+    border-radius:40px ;
+    background-size:200% ;
+    transition:.5s ease;
+}
+
+.home-img{
+    width: 410px; ;
+    height: 410px;
+    
+}
+.home-img .glowing-circle{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: yellowgreen;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home-img .glowing-circle::after{
+    content: '';
+    position: absolute;
+    width: 380px;
+    height: 380px;
+    background: #0c1022;
+    border-radius: 50%;
+}
+.glowing-circle span{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#f06,#3cf);
+    border-radius: 50%;
+}
+.glowing-circle .image{
+    position: relative;
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    z-index: 1;
+    overflow: hidden;
+}
+.image img{
+    position:absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width:350px;
+    object-fit: cover;
+}
+/*----------------about---------*/
+.about{
+   padding:80px 0;
+   color: #aaa; 
+}
+.container {
+    max-width: 800px; /* Adjust the maximum width as needed */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 20px;
+    top: 30px;
+    left: 50%;
+    position: center;
+    
+  }
+.row{
+    margin-right: 100px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1{
+    flex-basis:35%;
+    text-align:left;
+}
+.about-col-2{
+    text-align:right;
+    flex: basis 70%;
+}
+.sub-title{
+    margin-right: 200px;
+    font-size:60px;
+    font-weight: 600;
+    color: #fff;
+}
+.sentences{
+
+    font-size: 16px;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+/*----------------------------- Project----------------*/
+#projects {
+    padding: 40px;
+    text-align:left;
+  }
+  #projects h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center; /* Center the heading */
+  } 
+  .project {
+    
+    padding: 20px; /* Add padding to separate projects */
+    margin-bottom: 20px; /* Add space between projects */
+    float:right;
+    margin-right:50px;
+  }
+
+  /* Style the Services Section */
+#services {
+    /* Set a background color */
+    padding: 20px; /* Add padding for spacing */
+  }
+  
+  /* Style the Services Title */
+  #services h2 {
+    font-size: 24px; /* Set the font size */
+    margin-bottom: 20px; /* Add spacing below the title */
+  }
+  
+  /* Style the Services List */
+  #services ul {
+    list-style: none; /* Remove bullets from the list */
+    padding: 0; /* Remove default padding */
+  }
+  
+  /* Style the Services List Items */
+  #services li {
+    font-size: 18px; /* Set the font size */
+    margin-bottom: 10px; /* Add spacing between items */
+  }
+  
+  /* Style the Contact Section */
+  #contact {
+    
+    padding: 20px; /* Add padding for spacing */
+  }
+  
+  /* Style the Contact Title */
+  #contact h2 {
+    font-size: 24px; /* Set the font size */
+    margin-bottom: 20px; /* Add spacing below the title */
+  }
+  
+  /* Style the Contact Information */
+  .contact-info p {
+    font-size: 18px; /* Set the font size */
+    margin-bottom: 10px; /* Add spacing between items */
+  }
+  
+  /* Style the Contact Form */
+  .contact-form {
+    margin-top: 20px; /* Add spacing above the form */
+    
+  }
+  
+  /* Style the Form Elements */
+  .contact-form h3 {
+    font-size: 20px; /* Set the font size for the form title */
+    margin-bottom: 10px; /* Add spacing below the title */
+  }
+  
+  .contact-form form {
+    max-width: 400px; /* Set the maximum width for the form */
+  }
+  
+  .contact-form input[type="text"],
+  .contact-form input[type="tel"],
+  .contact-form input[type="email"],
+  .contact-form textarea {
+    width: 100%; /* Make the input fields and textarea span the full width */
+    padding: 10px; /* Add padding inside the fields */
+    margin-bottom: 10px; /* Add spacing between fields */
+    border: 1px solid #ccc; /* Add a border to the fields */
+    border-radius: 5px; /* Rounded corners for fields */
+    font-size: 16px; /* Set the font size for fields */
+  }
+  
+  .contact-form button[type="submit"] {
+    background-color: #007BFF; /* Set a background color for the submit button */
+    color: #fff; /* Set text color */
+    padding: 10px 20px; /* Add padding inside the button */
+    border: none; /* Remove the button border */
+    border-radius: 5px; /* Rounded corners for the button */
+    font-size: 18px; /* Set the font size for the button text */
+    cursor: pointer; /* Add a pointer cursor */
+  }
+  
+  .contact-form button[type="submit"]:hover {
+    background-color: #0056b3; /* Change the background color on hover */
+  }
